@@ -4,7 +4,7 @@ import Badge, { colors } from '../ui/atoms/Badge';
 import { withKnobs, text } from "@storybook/addon-knobs";
 
 export default {
-    title: 'Atoms | Badge',
+    title: 'Atoms / Badge',
     component: Badge,
     decorators: [withKnobs]
 };

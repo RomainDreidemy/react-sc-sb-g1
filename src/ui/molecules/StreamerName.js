@@ -1,8 +1,9 @@
 import React from "react";
 import styled, { css } from "styled-components";
 import PropTypes from "prop-types";
-import VerifiedIcon from "./../atoms/VerifiedIcon"
-import "./../../assets/font/RoobertTRIAL-Regular.otf"
+import "./../../assets/font/RoobertTRIAL-Regular.otf";
+import Verified from "../../assets/img/verified.png";
+
 
 const StreamerNameWrapper = styled.h1`
     font-family: Roobert TRIAL;
@@ -16,11 +17,15 @@ const StreamerNameWrapper = styled.h1`
     }
 `;
 
+const VerifiedIconWrapper = styled.img`
+    margin-left: 5px;
+`;
+
 const StreamerName = props => {
     const { text, darkMode, verified, userConnected } = props;
     return <StreamerNameWrapper verified={verified}>{text} 
         {
-            (verified) ? <VerifiedIcon/> : ''
+            (verified) ? <VerifiedIconWrapper src={Verified} /> : ''
         }
     </StreamerNameWrapper>;
 };

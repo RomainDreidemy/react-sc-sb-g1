@@ -3,7 +3,7 @@ import StreamerName from '../ui/molecules/StreamerName';
 import { withKnobs, text, boolean } from "@storybook/addon-knobs";
 
 export default {
-    title: 'Molecules | Streamer name',
+    title: 'Molecules / Streamer name',
     component: StreamerName,
     decorators: [withKnobs],
 };
