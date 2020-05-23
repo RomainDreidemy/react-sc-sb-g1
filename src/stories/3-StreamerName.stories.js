@@ -10,10 +10,10 @@ export default {
 
 export const Normal = () => <StreamerName 
     text={text("Pseudo", "Skyart")}
-    verified={(boolean("Verified", false))}
+    certified={(boolean("Certified", false))}
 />;
 
-export const Verified = () => <StreamerName 
+export const Certified = () => <StreamerName 
     text={text("Pseudo", "Skyart")}
-    verified={(boolean("Verified", true))}
+    certified={(boolean("Certified", true))}
 />;

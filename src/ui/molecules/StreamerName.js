@@ -2,7 +2,7 @@ import React from "react";
 import styled, { css } from "styled-components";
 import PropTypes from "prop-types";
 import "./../../assets/font/RoobertTRIAL-Regular.otf";
-import Verified from "../../assets/img/verified.png";
+import certifiedIcon from "../../assets/img/certified.png";
 
 
 const StreamerNameWrapper = styled.h1`
@@ -17,27 +17,27 @@ const StreamerNameWrapper = styled.h1`
     }
 `;
 
-const VerifiedIconWrapper = styled.img`
+const CertifiedIconWrapper = styled.img`
     margin-left: 5px;
 `;
 
 const StreamerName = props => {
-    const { text, darkMode, verified, userConnected } = props;
-    return <StreamerNameWrapper verified={verified}>{text} 
+    const { text, darkMode, certified, userConnected } = props;
+    return <StreamerNameWrapper certified={certified}>{text} 
         {
-            (verified) ? <VerifiedIconWrapper src={Verified} /> : ''
+            (certified) ? <CertifiedIconWrapper src={certifiedIcon} /> : ''
         }
     </StreamerNameWrapper>;
 };
 
 StreamerName.propTypes = {
     text: PropTypes.string,
-    verified: PropTypes.bool,
+    certified: PropTypes.bool,
 };
 
 StreamerName.defaultProps = {
     text: '',
-    verified: false,
+    certified: false,
 };
 
 export default StreamerName;
